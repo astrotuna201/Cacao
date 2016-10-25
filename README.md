@@ -1,7 +1,7 @@
 # Cacao
-[![Swift](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift](https://img.shields.io/badge/swift-3.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/platform-osx%20%7C%20linux-lightgrey.svg)](https://developer.apple.com/swift/)
-[![Release](https://img.shields.io/github/release/pureswift/cacao.svg)](https://github.com/PureSwift/Cacao/releases)
+[![Release](https://img.shields.io/github/release/pureswift/cacao.svg)](https://github.com/astrotuna201/Cacao/releases)
 [![License](https://img.shields.io/badge/license-MIT-71787A.svg)](https://tldrlegal.com/license/mit-license)
 [![Join the chat at https://gitter.im/PureSwift/SwiftFoundation](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/PureSwift/Cacao?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
@@ -13,16 +13,15 @@ Pure Swift Cross-platform UIKit (Cocoa Touch) implementation (Supports Linux)
 ## Installation
 
 ### OS X
-`brew install cairo sdl2 && carthage bootstrap`
-
+`brew install cairo sdl2 freetype fontconfig && carthage bootstrap`
+for now: use Xcode to build ... "swift build" fails to link sdl2
 ### Ubuntu
 `sudo apt-get install libcairo-dev libsdl2-dev`
-
-Copy [modified headers](https://github.com/PureSwift/CairoHeaders) to `/usr/include`
+swift build
 
 ## Screenshots
 
-### Run [PaintCode](http://www.paintcodeapp.com) StyleKits in Linux
+### Run [PaintCode](http://www.paintcodeapp.com) StyleKits in Linux (after removing NSObject base class)
 
 ![Image](ReadmeImages/UbuntuStyleKit.png)
 
