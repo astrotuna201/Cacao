@@ -16,9 +16,8 @@
 #endif
 
 import Silica
-import ObjectiveC
 
-internal final class StyleKit : NSObject {
+internal final class StyleKit {
 
     //// Drawing Methods
 

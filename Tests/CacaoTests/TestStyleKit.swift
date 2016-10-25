@@ -18,7 +18,7 @@
 import Cacao
 import Silica
 
-public final class TestStyleKit : NSObject {
+public final class TestStyleKit {
 
     //// Cache
 
