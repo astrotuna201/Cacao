@@ -176,7 +176,7 @@ public struct NSStringDrawingOptions: OptionSet, ExpressibleByIntegerLiteral {
     }
 }
 
-#if os(Linux)
+/*#if os(Linux)
     
     /// Expects `UIFont` value.
     public let NSFontAttributeName = "NSFontAttributeName"
@@ -187,7 +187,7 @@ public struct NSStringDrawingOptions: OptionSet, ExpressibleByIntegerLiteral {
     /// Expects `NSMutableParagraphStyle` value.
     public let NSParagraphStyleAttributeName = "NSParagraphStyleAttributeName"
     
-#endif
+#endif*/
 
 #if NeverCompile
     
