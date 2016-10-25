@@ -7,8 +7,11 @@
 //
 
 import Silica
-import CSDL2
-
+#if os(OSX)
+	import CSDL2Mac
+#else
+	import CSDL2
+#endif
 // MARK: - Pointer Event
 
 /// Events related to pointer input (e.g. Mouse, Touch Screen).

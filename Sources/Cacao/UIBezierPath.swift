@@ -96,7 +96,7 @@ public final class UIBezierPath {
         
         setContextPath()
         
-        try! context.fill(evenOdd: usesEvenOddFillRule)
+        try! context.fill(usesEvenOddFillRule)
         context.beginPath()
         try! context.restore()
     }
@@ -110,7 +110,7 @@ public final class UIBezierPath {
         
         setContextPath()
         
-        context.clip(evenOdd: usesEvenOddFillRule)
+        context.clip(usesEvenOddFillRule)
     }
     
     // MARK: - Constructing a Path
@@ -147,13 +147,13 @@ public final class UIBezierPath {
     
     // MARK: - Private Methods
     
-    private func setContextPath() {
+    fileprivate func setContextPath() {
         
         guard let context = UIGraphicsGetCurrentContext()?.silicaContext
             else { return }
         
         context.beginPath()
-        context.add(path: CGPath)
+        context.add(CGPath)
         context.lineWidth = lineWidth
         context.lineCap = lineCapStyle
         context.lineJoin = lineJoinStyle

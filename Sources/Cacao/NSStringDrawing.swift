@@ -46,6 +46,10 @@ public extension String {
 public typealias NSParagraphStyle = NSMutableParagraphStyle
 public typealias NSStringDrawingContext = Void
 
+let NSFontAttributeName = "NSFont"
+let NSForegroundColorAttributeName = "NSColor"
+let NSParagraphStyleAttributeName = "NSParagraphStyle"
+
 public extension TextAttributes {
     
     init(UIKit attributes: [String: Any]) {

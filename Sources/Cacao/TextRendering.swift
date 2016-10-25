@@ -22,7 +22,7 @@ public extension String {
         
         context.textPosition = textRect.origin
         
-        context.show(text: self)
+        context.show(self)
     }
     
     func contentFrame(for bounds: Rect, textMatrix: Silica.AffineTransform = AffineTransform.identity, attributes: TextAttributes = TextAttributes()) -> Rect {
@@ -31,7 +31,7 @@ public extension String {
         
         // calculate frame
         
-        let textWidth = attributes.font.silicaFont.singleLineWidth(text: self, fontSize: attributes.font.size, textMatrix: textMatrix)
+        let textWidth = attributes.font.silicaFont.singleLineWidth(self, fontSize: attributes.font.size, textMatrix: textMatrix)
         
         let lines = 1
         

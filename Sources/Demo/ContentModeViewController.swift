@@ -8,6 +8,8 @@
 
 #if os(Linux)
 import Glibc
+#else
+import Darwin
 #endif
 
 import Cacao
@@ -31,7 +33,7 @@ final class ContentModeViewController: ViewController {
     
     // MARK: - Loading
     
-    private func loadView() -> UIView {
+    fileprivate func loadView() -> UIView {
         
         let backgroundView = UIView()
         
@@ -59,7 +61,7 @@ final class ContentModeViewController: ViewController {
     
     // MARK: - Methods
     
-    func changeMode(sender: Button) {
+    func changeMode(_ sender: Button) {
         
         let currentMode = button.contentView.mode
         

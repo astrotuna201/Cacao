@@ -30,7 +30,7 @@ public final class Screen {
     
     // MARK: - Private Properties
     
-    private var context: Silica.Context!
+    fileprivate var context: Silica.Context!
     
     // MARK: - Initialization
     
@@ -44,7 +44,7 @@ public final class Screen {
     public func render() throws {
         
         context = try Silica.Context(surface: target.surface, size: target.nativeSize)
-        
+		
         context.scale(x: scale, y: scale)
         
         let frame = Rect(size: target.size)
@@ -53,17 +53,17 @@ public final class Screen {
         
         if let rootView = rootViewController?.view {
             
-            render(view: rootView, in: frame)
+            render(rootView, in: frame)
         }
     }
     
-    public func handle(event: PointerEvent) {
+    public func handle(_ event: PointerEvent) {
         
         guard let rootView = rootViewController?.view,
-            let hitView = rootView.hitTest(point: event.screenLocation)
+            let hitView = rootView.hitTest(event.screenLocation)
             else { return }
         
-        hitView.handle(event: event)
+        hitView.handle(event)
     }
     
     /*
@@ -75,7 +75,7 @@ public final class Screen {
     
     // MARK: - Private Methods
     
-    private func render(view: View, in frame: Rect) {
+    fileprivate func render(_ view: View, in frame: Rect) {
         
         guard view.hidden == false
             else { return }
@@ -86,7 +86,7 @@ public final class Screen {
         // render view
         if let drawable = view as? Drawable {
             
-            drawable.draw(context: context)
+            drawable.draw(context)
             
             if drawable.clipsToBounds {
                 
@@ -97,14 +97,14 @@ public final class Screen {
         
         // render subviews
         let bounds = Rect(size: frame.size)
-        view.subviews.forEach { render(view: $0, in: bounds) }
+        view.subviews.forEach { render($0, in: bounds) }
         
         // remove translation
         context.translate(x: -view.frame.x, y: -view.frame.y)
     }
     
     @inline(__always)
-    private func updateViewLayout() {
+    fileprivate func updateViewLayout() {
         
         rootViewController?.view.frame = Rect(size: target.size)
         rootViewController?.layoutView()

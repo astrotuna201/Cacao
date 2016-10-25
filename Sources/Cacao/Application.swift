@@ -5,15 +5,19 @@
 //  Created by Alsey Coleman Miller on 5/21/16.
 //  Copyright © 2016 PureSwift. All rights reserved.
 //
+#if os(OSX)
+	import CSDL2Mac
+#else
+	import CSDL2
+#endif
 
-import CSDL2
 import Silica
 import Cairo
 import CCairo
 
 public protocol Application: class {
     
-    func didFinishLaunching(screen: Screen)
+    func didFinishLaunching(_ screen: Screen)
     
     func willTerminate()
     
@@ -119,7 +123,7 @@ public extension Application {
             framesPerSecond = UInt32(self.framesPerSecond)
         }
         
-        self.didFinishLaunching(screen: screen)
+        self.didFinishLaunching(screen)
         
         // enter main loop
         
@@ -161,7 +165,7 @@ public extension Application {
                     guard event.button.which != SDL_TOUCH_MOUSEID
                         else { return }*/
                     
-                    screen.handle(event: PointerEvent(event.button))
+                    screen.handle(PointerEvent(event.button))
                     
                 case SDL_FINGERDOWN, SDL_FINGERUP: break
                     

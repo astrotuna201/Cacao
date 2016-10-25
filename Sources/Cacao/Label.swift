@@ -40,7 +40,7 @@ public final class Label: Drawable, Appearance {
     
     // MARK: - Draw
     
-    public func draw(context: Context) {
+    public func draw(_ context: Context) {
         
         let bounds = Rect(size: frame.size)
         

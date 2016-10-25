@@ -46,7 +46,7 @@ open class UIView: Drawable {
     
     // MARK: - Drawable
     
-    public final func draw(context: Context) {
+    public final func draw(_ context: Context) {
         
         guard hidden == false && alpha > 0
             else { return }
@@ -55,7 +55,7 @@ open class UIView: Drawable {
         
         // draw background color
         context.fillColor = backgroundColor.CGColor
-        context.add(rect: bounds)
+        context.add(bounds)
         try! context.fill()
         
         // draw rect
@@ -66,7 +66,7 @@ open class UIView: Drawable {
     
     // MARK: - InteractiveView
     
-    public final func handle(event: PointerEvent) {
+    public final func handle(_ event: PointerEvent) {
         
         // translate to UIKit APIs
     }

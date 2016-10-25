@@ -17,7 +17,7 @@ final class Application: Cacao.Application {
     
     var framesPerSecond: Int = 60
     
-    func didFinishLaunching(screen: Screen) {
+    func didFinishLaunching(_ screen: Screen) {
         
         print("Started Demo app")
         

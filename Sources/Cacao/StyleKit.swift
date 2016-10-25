@@ -16,12 +16,13 @@
 #endif
 
 import Silica
+import ObjectiveC
 
 internal final class StyleKit : NSObject {
 
     //// Drawing Methods
 
-    class func drawSwiftLogoWithText(frame: CGRect = CGRect(x: 0, y: 0, width: 164, height: 48)) {
+    class func drawSwiftLogoWithText(_ frame: CGRect = CGRect(x: 0, y: 0, width: 164, height: 48)) {
         //// General Declarations
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
@@ -264,7 +265,7 @@ internal final class StyleKit : NSObject {
         bezier3Path.fill()
     }
 
-    class func drawSwiftLogo(frame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
+    class func drawSwiftLogo(_ frame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
         //// General Declarations
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }

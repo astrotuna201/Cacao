@@ -13,7 +13,7 @@ public final class SwiftLogoView: Drawable {
     
     // MARK: - Static Methods
     
-    public static func contentSize(includesText: Bool) -> Size {
+    public static func contentSize(_ includesText: Bool) -> Size {
         
         return includesText ? Size(width: 164, height: 48) : Size(width: 48, height: 48)
     }
@@ -36,7 +36,7 @@ public final class SwiftLogoView: Drawable {
     /// The intrinsic content size.
     public var intrinsicContentSize: Size  {
         
-        return SwiftLogoView.contentSize(includesText: includesText)
+        return SwiftLogoView.contentSize(includesText)
     }
     
     // MARK: - Initialization
@@ -44,12 +44,12 @@ public final class SwiftLogoView: Drawable {
     public init(frame: Rect? = nil, includesText: Bool = false) {
         
         self.includesText = includesText
-        self.frame = frame ?? Rect(size: SwiftLogoView.contentSize(includesText: includesText))
+        self.frame = frame ?? Rect(size: SwiftLogoView.contentSize(includesText))
     }
     
     // MARK: - Drawing
     
-    public func draw(context: Silica.Context) {
+    public func draw(_ context: Silica.Context) {
         
         let bounds = Rect(size: frame.size)
         
@@ -57,11 +57,11 @@ public final class SwiftLogoView: Drawable {
         
         if includesText {
             
-            StyleKit.drawSwiftLogoWithText(frame: bounds)
+            StyleKit.drawSwiftLogoWithText(bounds)
             
         } else {
             
-            StyleKit.drawSwiftLogo(frame: bounds)
+            StyleKit.drawSwiftLogo(bounds)
         }
         
         UIGraphicsPopContext()

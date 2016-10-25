@@ -11,7 +11,7 @@ import Foundation
 import CCairo
 import Cairo
 import Silica
-import Cacao
+@testable import Cacao
 
 #if os(OSX) || os(iOS) || os(watchOS)
     func XCTMain(_ testCases: [XCTestCaseEntry]) { fatalError("Not Implemented. Linux only") }

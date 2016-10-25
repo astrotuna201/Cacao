@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42044D421DBF95260062E1ED /* CSDL2Mac in Resources */ = {isa = PBXBuildFile; fileRef = 42044D411DBF95260062E1ED /* CSDL2Mac */; };
 		6E031ACB1CFB7090004C8431 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E031ACA1CFB7090004C8431 /* Label.swift */; };
 		6E031ACD1CFB794F004C8431 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E031ACC1CFB794F004C8431 /* UIFont.swift */; };
 		6E031AE31CFC296B004C8431 /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E031AE21CFC296B004C8431 /* CoreGraphics.swift */; };
@@ -101,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42044D411DBF95260062E1ED /* CSDL2Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CSDL2Mac; path = ../Carthage/Checkouts/CSDL2Mac; sourceTree = SOURCE_ROOT; };
 		6E031ACA1CFB7090004C8431 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		6E031ACC1CFB794F004C8431 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		6E031AE21CFC296B004C8431 /* CoreGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphics.swift; sourceTree = "<group>"; };
@@ -113,12 +115,11 @@
 		6E0F3FFE1CF139F7009CA26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6E0F40001CF139F7009CA26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E0F40041CF14248009CA26A /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		6E0F40081CF145E5009CA26A /* libSDL2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL2.dylib; path = ../../../../../../../usr/local/lib/libSDL2.dylib; sourceTree = "<group>"; };
-		6E0F400A1CF14D15009CA26A /* libcairo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcairo.dylib; path = ../../../../../../../usr/local/lib/libcairo.dylib; sourceTree = "<group>"; };
+		6E0F40081CF145E5009CA26A /* libSDL2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL2.dylib; path = ../../../../../usr/local/lib/libSDL2.dylib; sourceTree = SOURCE_ROOT; };
+		6E0F400A1CF14D15009CA26A /* libcairo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcairo.dylib; path = ../../../../../usr/local/lib/libcairo.dylib; sourceTree = SOURCE_ROOT; };
 		6E0F40111CF15525009CA26A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6E0F40181CF19652009CA26A /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		6E0F401D1CF196E6009CA26A /* SwiftLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLogoView.swift; sourceTree = "<group>"; };
-		6E0F9D371CF04FF2007FDFC9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		6E0F9D391CF05064007FDFC9 /* ScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 		6E0F9D3A1CF05064007FDFC9 /* StyleKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKitTests.swift; sourceTree = "<group>"; };
 		6E0F9D3B1CF05064007FDFC9 /* TestStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStyleKit.swift; sourceTree = "<group>"; };
@@ -220,13 +221,13 @@
 				6E0F9D3B1CF05064007FDFC9 /* TestStyleKit.swift */,
 				6ECBBF2A1CFD934900D50A9E /* FontTests.swift */,
 			);
-			path = CacaoTests;
+			name = CacaoTests;
+			path = ../Tests/CacaoTests;
 			sourceTree = "<group>";
 		};
 		6E169A5F1CE436E800C60B0B = {
 			isa = PBXGroup;
 			children = (
-				6E0F9D371CF04FF2007FDFC9 /* Package.swift */,
 				6EC46E2F1CE476A4002A1F52 /* Dependencies */,
 				6E169A831CE4395800C60B0B /* Sources */,
 				6E169A6B1CE436E800C60B0B /* Cacao */,
@@ -325,6 +326,7 @@
 		6EC46E301CE476B6002A1F52 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				42044D411DBF95260062E1ED /* CSDL2Mac */,
 				6E0F40111CF15525009CA26A /* AppKit.framework */,
 				6E0F400A1CF14D15009CA26A /* libcairo.dylib */,
 				6E0F40081CF145E5009CA26A /* libSDL2.dylib */,
@@ -417,10 +419,13 @@
 				TargetAttributes = {
 					6E0F3FF61CF139F7009CA26A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QW4597S5KD;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 					};
 					6E169A681CE436E800C60B0B = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					6E169A721CE436E800C60B0B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -462,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42044D421DBF95260062E1ED /* CSDL2Mac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,12 +568,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QW4597S5KD;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/freetype2,
+					/usr/local/include/fontconfig,
+					/usr/local/include/cairo,
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pureswift.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -576,12 +591,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QW4597S5KD;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/freetype2,
+					/usr/local/include/fontconfig,
+					/usr/local/include/cairo,
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pureswift.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -636,7 +660,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -686,7 +710,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -703,14 +727,21 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/freetype2,
+					/usr/local/include/fontconfig,
+					/usr/local/include/cairo,
+				);
 				INFOPLIST_FILE = Cacao/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pureswift.Cacao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = $SRCROOT;
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/../Carthage/Checkouts/CSDL2Mac";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -725,13 +756,20 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/freetype2,
+					/usr/local/include/fontconfig,
+					/usr/local/include/cairo,
+				);
 				INFOPLIST_FILE = Cacao/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pureswift.Cacao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = $SRCROOT;
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/../Carthage/Checkouts/CSDL2Mac";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -745,6 +783,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pureswift.CacaoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -757,6 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pureswift.CacaoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

@@ -23,15 +23,15 @@ public protocol View: class {
     
     func layoutSubviews()
     
-    func handle(event: PointerEvent)
+    func handle(_ event: PointerEvent)
     
-    func hitTest(point: Point) -> View?
+    func hitTest(_ point: Point) -> View?
 }
 
 /// A view that can draw.
 public protocol Drawable: View {
     
-    func draw(context: Silica.Context)
+    func draw(_ context: Silica.Context)
     
     var clipsToBounds: Bool { get }
 }
@@ -54,14 +54,14 @@ public extension View {
         subviews.forEach { $0.layoutSubviews() }
     }
     
-    func handle(event: PointerEvent) { }
+    func handle(_ event: PointerEvent) { }
     
     /// Returns the farthest descendant of the receiver in the view hierarchy (including itself) that contains a specified point.
     /// 
     /// - Note: This method ignores view objects that are hidden or have user interaction disabled.
     /// This method does not take the view’s content into account when determining a hit. 
     /// Thus, a view can still be returned even if the specified point is in a transparent portion of that view’s content.
-    func hitTest(point: Point) -> View? {
+    func hitTest(_ point: Point) -> View? {
         
         guard hidden == false
             && userInteractionEnabled
@@ -73,7 +73,7 @@ public extension View {
         
         for subview in subviews {
             
-            guard let descendant = subview.hitTest(point: subviewPoint) else { return nil }
+            guard let descendant = subview.hitTest(subviewPoint) else { return nil }
             
             return descendant
         }

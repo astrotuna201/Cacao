@@ -35,7 +35,7 @@ public final class Button: View {
     
     // MARK: - Methods
     
-    public func hitTest(point: Point) -> View? {
+    public func hitTest(_ point: Point) -> View? {
         
         guard hidden == false
             && userInteractionEnabled
@@ -47,7 +47,7 @@ public final class Button: View {
         return self
     }
     
-    public func handle(event: PointerEvent) {
+    public func handle(_ event: PointerEvent) {
         
         switch event.input {
             

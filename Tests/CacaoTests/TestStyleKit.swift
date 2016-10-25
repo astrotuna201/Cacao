@@ -123,7 +123,7 @@ public final class TestStyleKit : NSObject {
 
         //// Group 2
         context.saveGState()
-        context.beginTransparencyLayer(auxiliaryInfo: nil)
+        context.beginTransparencyLayer(nil)
 
         //// Clip Clip
         let clipPath = UIBezierPath()
