@@ -14,8 +14,8 @@
 #if os(Linux)
     import Glibc
 #endif
-import Foundation.NSObject
 import Silica
+import Foundation
 
 internal final class StyleKit : NSObject {
 

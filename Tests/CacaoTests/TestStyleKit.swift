@@ -15,9 +15,9 @@
     import Glibc
 #endif
 
-import Foundation.NSObject
 import Cacao
 import Silica
+import Foundation
 
 public final class TestStyleKit : NSObject {
 
