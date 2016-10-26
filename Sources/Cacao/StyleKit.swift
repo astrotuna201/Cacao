@@ -14,10 +14,10 @@
 #if os(Linux)
     import Glibc
 #endif
-
+import Foundation
 import Silica
 
-internal final class StyleKit {
+internal final class StyleKit : NSObject {
 
     //// Drawing Methods
 
