@@ -21,10 +21,10 @@ internal final class StyleKit : NSObject {
 
     //// Drawing Methods
 
-    class func drawSwiftLogoWithText(_ frame: CGRect = CGRect(x: 0, y: 0, width: 164, height: 48)) {
+    class func drawSwiftLogoWithText(_ frame: Silica.CGRect = CGRect(x: 0, y: 0, width: 164, height: 48)) {
         //// General Declarations
         // This non-generic function dramatically improves compilation times of complex expressions.
-        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+        func fastFloor(_ x: Silica.CGFloat) -> Silica.CGFloat { return floor(x) }
 
         //// Color Declarations
         let fillColor = UIColor(red: 0.915, green: 0.224, blue: 0.170, alpha: 1.000)
@@ -33,7 +33,7 @@ internal final class StyleKit : NSObject {
 
 
         //// Subframes
-        let group: CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.00061 + 0.4) + 0.1, y: frame.minY + fastFloor(frame.height * 0.01250 - 0.1) + 0.6, width: fastFloor(frame.width * 0.28780 + 0.3) - fastFloor(frame.width * 0.00061 + 0.4) + 0.1, height: fastFloor(frame.height * 0.99375 - 0.2) - fastFloor(frame.height * 0.01250 - 0.1) + 0.1)
+        let group: Silica.CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.00061 + 0.4) + 0.1, y: frame.minY + fastFloor(frame.height * 0.01250 - 0.1) + 0.6, width: fastFloor(frame.width * 0.28780 + 0.3) - fastFloor(frame.width * 0.00061 + 0.4) + 0.1, height: fastFloor(frame.height * 0.99375 - 0.2) - fastFloor(frame.height * 0.01250 - 0.1) + 0.1)
 
 
         //// Group
@@ -264,10 +264,10 @@ internal final class StyleKit : NSObject {
         bezier3Path.fill()
     }
 
-    class func drawSwiftLogo(_ frame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
+    class func drawSwiftLogo(_ frame: Silica.CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
         //// General Declarations
         // This non-generic function dramatically improves compilation times of complex expressions.
-        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+        func fastFloor(_ x: Silica.CGFloat) -> Silica.CGFloat { return floor(x) }
 
         //// Color Declarations
         let fillColor = UIColor(red: 0.915, green: 0.224, blue: 0.170, alpha: 1.000)
@@ -275,7 +275,7 @@ internal final class StyleKit : NSObject {
 
 
         //// Subframes
-        let group: CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.00000 + 0.5), y: frame.minY + fastFloor(frame.height * 0.00000 + 0.5), width: fastFloor(frame.width * 1.00100 + 0.4) - fastFloor(frame.width * 0.00000 + 0.5) + 0.1, height: fastFloor(frame.height * 1.00100 + 0.4) - fastFloor(frame.height * 0.00000 + 0.5) + 0.1)
+        let group: Silica.CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.00000 + 0.5), y: frame.minY + fastFloor(frame.height * 0.00000 + 0.5), width: fastFloor(frame.width * 1.00100 + 0.4) - fastFloor(frame.width * 0.00000 + 0.5) + 0.1, height: fastFloor(frame.height * 1.00100 + 0.4) - fastFloor(frame.height * 0.00000 + 0.5) + 0.1)
 
 
         //// Group
