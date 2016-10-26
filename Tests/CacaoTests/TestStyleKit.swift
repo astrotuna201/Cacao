@@ -14,7 +14,8 @@
 #if os(Linux)
     import Glibc
 #endif
-import Foundation
+
+import Foundation.NSObject
 import Cacao
 import Silica
 
