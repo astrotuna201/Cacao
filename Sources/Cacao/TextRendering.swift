@@ -58,7 +58,7 @@ public struct TextAttributes {
     
     public init() { }
     
-    public var font = Font(name: "Helvetica", size: 17)!
+    public var font = Font(name: "Helvetica", size: 17) ?? Font(name: "Arial", size: 17)!
     
     public var color = Color.black
     
