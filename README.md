@@ -1,7 +1,7 @@
 # Cacao
 [![Swift](https://img.shields.io/badge/swift-3.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/platform-osx%20%7C%20linux-lightgrey.svg)](https://developer.apple.com/swift/)
-[![Release](https://img.shields.io/github/release/pureswift/cacao.svg)](https://github.com/astrotuna201/Cacao/releases)
+[![Release](https://img.shields.io/github/release/astrotuna201/cacao.svg)](https://github.com/astrotuna201/Cacao/releases)
 [![License](https://img.shields.io/badge/license-MIT-71787A.svg)](https://tldrlegal.com/license/mit-license)
 [![Join the chat at https://gitter.im/PureSwift/SwiftFoundation](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/PureSwift/Cacao?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
