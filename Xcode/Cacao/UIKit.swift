@@ -8,4 +8,4 @@
 
 import Cacao
 
-public typealias NSMutableParagraphStyle = Cacao.NSMutableParagraphStyle
+//public typealias NSMutableParagraphStyle = Cacao.NSMutableParagraphStyle

@@ -15,9 +15,13 @@
     import Glibc
 #endif
 
-import Cacao
+@testable import Cacao
 import Silica
 import Foundation
+
+typealias CGRect = Silica.CGRect
+typealias NSMutableParagraphStyle = Cacao.NSMutableParagraphStyle
+typealias CGFloat = Silica.CGFloat
 
 public final class TestStyleKit : NSObject {
 
@@ -410,7 +414,7 @@ public final class TestStyleKit : NSObject {
         let text2TextContent = "Left"
         let text2Style = NSMutableParagraphStyle()
         text2Style.alignment = .left
-        let text2FontAttributes = [NSFontAttributeName: UIFont(name: "ComicSansMS", size: 17)!, NSForegroundColorAttributeName: UIColor.white, NSParagraphStyleAttributeName: text2Style] as [String : Any]
+        let text2FontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "ComicSansMS", size: 17)!, Cacao.NSForegroundColorAttributeName: UIColor.white, Cacao.NSParagraphStyleAttributeName: text2Style] as [String : Any]
 
         let text2TextHeight: CGFloat = text2TextContent.boundingRect(with: CGSize(width: text2Rect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: text2FontAttributes, context: nil).height
         context.saveGState()
@@ -427,7 +431,7 @@ public final class TestStyleKit : NSObject {
         let text3TextContent = "Center"
         let text3Style = NSMutableParagraphStyle()
         text3Style.alignment = .center
-        let text3FontAttributes = [NSFontAttributeName: UIFont(name: "ComicSansMS", size: 17)!, NSForegroundColorAttributeName: UIColor.white, NSParagraphStyleAttributeName: text3Style] as [String : Any]
+        let text3FontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "ComicSansMS", size: 17)!, Cacao.NSForegroundColorAttributeName: UIColor.white, Cacao.NSParagraphStyleAttributeName: text3Style] as [String : Any]
 
         let text3TextHeight: CGFloat = text3TextContent.boundingRect(with: CGSize(width: text3Rect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: text3FontAttributes, context: nil).height
         context.saveGState()
@@ -444,7 +448,7 @@ public final class TestStyleKit : NSObject {
         let text4TextContent = "Right"
         let text4Style = NSMutableParagraphStyle()
         text4Style.alignment = .right
-        let text4FontAttributes = [NSFontAttributeName: UIFont(name: "ComicSansMS", size: 17)!, NSForegroundColorAttributeName: UIColor.white, NSParagraphStyleAttributeName: text4Style] as [String : Any]
+        let text4FontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "ComicSansMS", size: 17)!, Cacao.NSForegroundColorAttributeName: UIColor.white, Cacao.NSParagraphStyleAttributeName: text4Style] as [String : Any]
 
         let text4TextHeight: CGFloat = text4TextContent.boundingRect(with: CGSize(width: text4Rect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: text4FontAttributes, context: nil).height
         context.saveGState()
@@ -457,7 +461,7 @@ public final class TestStyleKit : NSObject {
         let text5Rect = CGRect(x: 0, y: 63, width: 240, height: 57)
         let text5Style = NSMutableParagraphStyle()
         text5Style.alignment = .center
-        let text5FontAttributes = [NSFontAttributeName: UIFont(name: "AmericanTypewriter-Bold", size: 17)!, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: text5Style] as [String : Any]
+        let text5FontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "AmericanTypewriter-Bold", size: 17)!, Cacao.NSForegroundColorAttributeName: UIColor.black, Cacao.NSParagraphStyleAttributeName: text5Style] as [String : Any]
 
         "Upper alignment".draw(in: text5Rect, withAttributes: text5FontAttributes)
     }
@@ -480,7 +484,7 @@ public final class TestStyleKit : NSObject {
         let text5TextContent = "Center - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         let text5Style = NSMutableParagraphStyle()
         text5Style.alignment = .center
-        let text5FontAttributes = [NSFontAttributeName: UIFont(name: "TimesNewRoman", size: 17)!, NSForegroundColorAttributeName: white, NSParagraphStyleAttributeName: text5Style] as [String : Any]
+        let text5FontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "TimesNewRoman", size: 17)!, Cacao.NSForegroundColorAttributeName: white, Cacao.NSParagraphStyleAttributeName: text5Style] as [String : Any]
         
         let text5TextHeight: CGFloat = text5TextContent.boundingRect(with: CGSize(width: text5Rect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: text5FontAttributes, context: nil).height
         context.saveGState()
@@ -497,7 +501,7 @@ public final class TestStyleKit : NSObject {
         let textTextContent = "Left - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .left
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "TimesNewRoman", size: 17)!, NSForegroundColorAttributeName: white, NSParagraphStyleAttributeName: textStyle] as [String : Any]
+        let textFontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "TimesNewRoman", size: 17)!, Cacao.NSForegroundColorAttributeName: white, Cacao.NSParagraphStyleAttributeName: textStyle] as [String : Any]
         
         let textTextHeight: CGFloat = textTextContent.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
         context.saveGState()
@@ -514,7 +518,7 @@ public final class TestStyleKit : NSObject {
         let text2TextContent = "Right - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         let text2Style = NSMutableParagraphStyle()
         text2Style.alignment = .right
-        let text2FontAttributes = [NSFontAttributeName: UIFont(name: "TimesNewRoman", size: 17)!, NSForegroundColorAttributeName: white, NSParagraphStyleAttributeName: text2Style] as [String : Any]
+        let text2FontAttributes = [Cacao.NSFontAttributeName: UIFont(name: "TimesNewRoman", size: 17)!, Cacao.NSForegroundColorAttributeName: white, Cacao.NSParagraphStyleAttributeName: text2Style] as [String : Any]
         
         let text2TextHeight: CGFloat = text2TextContent.boundingRect(with: CGSize(width: text2Rect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: text2FontAttributes, context: nil).height
         context.saveGState()

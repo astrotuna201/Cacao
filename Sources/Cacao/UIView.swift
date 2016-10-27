@@ -35,7 +35,7 @@ open class UIView: Drawable {
     
     // MARK: - Subclassable Methods
     
-    open func draw(_ rect: CGRect) { /* implemented by subclasses */ }
+    open func draw(_ rect: Silica.CGRect) { /* implemented by subclasses */ }
     
     // MARK: - Final Methods
     

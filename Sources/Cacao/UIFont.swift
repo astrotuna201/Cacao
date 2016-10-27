@@ -14,7 +14,7 @@ public extension UIFont {
     
     // MARK: - Class Methods
     
-    public static func labelFontSize() -> CGFloat { return 17 }
+    public static func labelFontSize() -> Silica.CGFloat { return 17 }
     
     // MARK: - Properties
     
@@ -22,5 +22,5 @@ public extension UIFont {
     
     public var familyName: String { return family }
     
-    public var pointSize: CGFloat { return size }
+    public var pointSize: Silica.CGFloat { return size }
 }

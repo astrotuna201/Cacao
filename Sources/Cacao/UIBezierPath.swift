@@ -96,7 +96,7 @@ public final class UIBezierPath {
         
         setContextPath()
         
-        try! context.fill(usesEvenOddFillRule)
+        try! context.fill(evenOdd: usesEvenOddFillRule)
         context.beginPath()
         try! context.restore()
     }

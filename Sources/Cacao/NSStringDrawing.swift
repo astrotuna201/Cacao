@@ -7,9 +7,22 @@
 //
 
 import Silica
+import Foundation
+//#if os(Linux)
+
+/// Expects `UIFont` value.
+public let NSFontAttributeName = "NSFont"
+
+/// Expects `UIColor` value.
+public let NSForegroundColorAttributeName = "NSForegroundColor"
+
+/// Expects `NSMutableParagraphStyle` value.
+public let NSParagraphStyleAttributeName = "NSParagraphStyle"
+
+//#endif
 
 public extension String {
-    
+	
     /// UIKit compatility drawing
     func draw(in rect: Rect, withAttributes attributes: [String: Any]) {
         
@@ -46,9 +59,6 @@ public extension String {
 public typealias NSParagraphStyle = NSMutableParagraphStyle
 public typealias NSStringDrawingContext = Void
 
-let NSFontAttributeName = "NSFont"
-let NSForegroundColorAttributeName = "NSColor"
-let NSParagraphStyleAttributeName = "NSParagraphStyle"
 
 public extension TextAttributes {
     
@@ -56,17 +66,17 @@ public extension TextAttributes {
         
         var textAttributes = TextAttributes()
         
-        if let font = attributes[NSFontAttributeName] as? UIFont {
+        if let font = attributes[Cacao.NSFontAttributeName] as? UIFont {
             
             textAttributes.font = font
         }
         
-        if let textColor = (attributes[NSForegroundColorAttributeName] as? UIColor)?.CGColor {
+        if let textColor = (attributes[Cacao.NSForegroundColorAttributeName] as? UIColor)?.CGColor {
             
             textAttributes.color = textColor
         }
         
-        if let paragraphStyle = attributes[NSParagraphStyleAttributeName] as? NSParagraphStyle {
+        if let paragraphStyle = attributes[Cacao.NSParagraphStyleAttributeName] as? NSParagraphStyle {
             
             textAttributes.paragraphStyle = paragraphStyle.toCacao()
         }
@@ -176,18 +186,7 @@ public struct NSStringDrawingOptions: OptionSet, ExpressibleByIntegerLiteral {
     }
 }
 
-/*#if os(Linux)
-    
-    /// Expects `UIFont` value.
-    public let NSFontAttributeName = "NSFontAttributeName"
-    
-    /// Expects `UIColor` value.
-    public let NSForegroundColorAttributeName = "NSForegroundColorAttributeName"
-    
-    /// Expects `NSMutableParagraphStyle` value.
-    public let NSParagraphStyleAttributeName = "NSParagraphStyleAttributeName"
-    
-#endif*/
+
 
 #if NeverCompile
     
