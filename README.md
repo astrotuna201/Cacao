@@ -14,7 +14,7 @@ Pure Swift Cross-platform UIKit (Cocoa Touch) implementation (Supports Linux)
 
 ### OS X
 `brew install cairo sdl2 freetype fontconfig && carthage bootstrap`
-for now: use Xcode to build ... "swift build" fails to link sdl2
+fuse Xcode to build ... or swift build -Xlinker -L/usr/local/lib if SDL2 installed via homebrew to that location
 ### Ubuntu
 `sudo apt-get install libcairo-dev libsdl2-dev`
 swift build
