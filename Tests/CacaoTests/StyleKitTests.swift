@@ -94,11 +94,9 @@ final class StyleKitTests: XCTestCase {
 }
 
 let outputDirectory: String = {
-    
     let outputDirectory = NSTemporaryDirectory() + "CacaoTests" + "/"
     
     var isDirectory: ObjCBool = false
-    
     if FileManager.default.fileExists(atPath: outputDirectory, isDirectory: &isDirectory) == false {
         
         try! FileManager.default.createDirectory(atPath: outputDirectory, withIntermediateDirectories: false)
@@ -109,11 +107,11 @@ let outputDirectory: String = {
 
 // this is why I hate old Foundation ObjC APIs
 #if os(Linux)
-extension NSFileManager {
+extension FileManager {
     
-    public static func `default`() -> NSFileManager {
+    public static func `default`() -> FileManager {
         
-        return NSFileManager.defaultManager()
+        return FileManager.defaultManager()
     }
 }
 #endif
